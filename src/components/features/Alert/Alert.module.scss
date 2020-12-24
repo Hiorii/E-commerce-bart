@@ -1,0 +1,49 @@
+@import "../../../styles/settings";
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  .content {
+    width: 30rem;
+    height: auto;
+    opacity: 0.95;
+    background: $milk;
+    @include center();
+    h3 {
+      margin: 1rem 0 0 1rem;
+      text-align: center;
+    }
+    div {
+      margin: 1.5rem 1rem;
+      font-size: 1.3rem;
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 1rem 1rem 0 0;
+      button {
+        background: transparent;
+        border: none;
+      }
+      .icon {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .success {
+    border-left: 20px solid $color-success;
+  }
+  .warning {
+    border-left: 20px solid $color-warning;
+  }
+  .danger {
+    border-left: 20px solid $color-danger;
+  }
+  .premium {
+    border-left: 20px solid $primary;
+    width: 40rem;
+  }
+}

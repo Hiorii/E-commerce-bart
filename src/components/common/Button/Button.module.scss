@@ -1,0 +1,181 @@
+@import "../../../styles/settings.scss";
+
+// .root {
+// }
+
+.main {
+  @extend %hover-effect;
+  background-color: $main-dark;
+  color: $white;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 600;
+  padding: 10px 30px;
+
+  &:not(.noHover):hover {
+    color: $white !important;
+    background-color: $primary;
+    text-decoration: none;
+  }
+}
+
+.small {
+  @extend .main;
+  font-size: 10px;
+  line-height: $line-height;
+  padding: 5px 10px;
+  font-weight: 400;
+}
+
+.outline {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $main-dark;
+  color: $main-dark;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  &:not(.noHover):hover {
+    background-color: #2a2a2a;
+    color: $main-white;
+  }
+}
+
+.outlineYellow {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $main-dark;
+  background-color: white;
+  color: $main-dark;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  &:not(.noHover):hover {
+    background-color: $primary;
+    color: white;
+  }
+}
+
+.outlineFacebook {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $main-dark;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: rgb(59, 89, 152);
+  }
+
+  &:not(.noHover):hover {
+    background-color: rgb(59, 89, 152);
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlineGoogle {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $main-dark;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: rgb(218, 68, 55);
+  }
+
+  &:not(.noHover):hover {
+    background-color: rgb(218, 68, 55);
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlineTwitter {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $main-dark;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: rgb(64, 153, 255);
+  }
+
+  &:not(.noHover):hover {
+    background-color: rgb(64, 153, 255);
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlinePinterest {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $main-dark;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: rgb(210, 76, 80);
+  }
+
+  &:not(.noHover):hover {
+    background-color: rgb(210, 76, 80);
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlineLinkedIn {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $main-dark;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: rgb(47, 143, 194);
+  }
+
+  &:not(.noHover):hover {
+    background-color: rgb(47, 143, 194);
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}

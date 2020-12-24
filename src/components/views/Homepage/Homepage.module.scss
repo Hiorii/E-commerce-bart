@@ -1,0 +1,63 @@
+@import "../../../styles/settings.scss";
+
+.premium {
+  h5 {
+    font-weight: bolder;
+    span {
+      color: $primary;
+      font-size: 1.6rem;
+    }
+  }
+  ul {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+  p{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  button {
+    background: transparent;
+    border: none;
+    h4 {
+      text-decoration: underline;
+      animation: growUp 2s linear 1s infinite;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.confirmPremium {
+  div {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      width: 7rem;
+      height: 3rem;
+      background: $primary;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@keyframes growUp {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

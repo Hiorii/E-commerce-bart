@@ -1,0 +1,65 @@
+@import "../../../styles/settings.scss";
+
+
+.bar {
+    background-color: $primary;
+    height: 10px;
+    width:10%;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: $dark-grey;
+    color: $milk;
+    letter-spacing: 10px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    h1, h2 {
+        text-align: center;
+    }
+    h1 {
+        font-size: 55px;
+        margin-top: 45px;
+        margin-bottom: 0;
+        font-weight: 300;
+        span {
+            font-weight: bold;
+        }
+    }
+    h2 {
+        margin-top: 10px;
+        span {
+            color: $primary;
+        }
+    }
+
+}
+
+.breadcrumbs {
+    padding: 10px;
+    background-color: $invisibleGrey;
+
+    .item {
+    display: inline-block;
+    position: relative;
+    padding-right: 5px;
+    }
+    a {
+        padding: 10px;
+        color: $heavenlyGrey;
+    }
+    .link:after {
+        content: ">";
+        position: absolute;
+        height: 20px;
+        width: 10px;
+        top: 0;
+        right: 0;
+        color: $dark-shadow;
+    }
+    .link_active {
+        color: $primary;
+    }
+}

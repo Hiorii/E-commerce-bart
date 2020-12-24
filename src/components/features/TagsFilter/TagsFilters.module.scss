@@ -1,0 +1,19 @@
+@import "../../../styles/settings.scss";
+
+
+.filterWrapper {
+    width: 100%;
+    p {
+        margin: 0;
+        padding-top: 2px;
+        margin-left: 10px;
+    }
+    .colorWrapper {
+        display: flex;
+    }
+    .colorWrapper_active {
+        display: flex;
+        margin-left: 30px;
+        color: $primary;
+    }
+}

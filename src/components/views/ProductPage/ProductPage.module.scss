@@ -1,0 +1,160 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: $base-padding 0;
+
+  background: linear-gradient(to bottom, $heavenlyGrey 50%, $white 50%);
+
+  .panelBar {
+    margin-bottom: 30px;
+    position: relative;
+
+    .heading {
+      position: relative;
+
+      h3 {
+        color: $milk;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 38px;
+        margin: 0;
+        letter-spacing: $letter-spacing;
+      }
+    }
+
+    .nav {
+      color: $milk;
+      font-size: 0.75rem;
+    }
+  }
+
+  .productBox {
+    background-color: $white;
+    border: 1px solid $heavenlyGrey;
+    padding: 25px;
+
+    p {
+      font-size: 0.75rem;
+      margin-bottom: 0;
+      line-height: 1.75;
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    h5 {
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 12px 0;
+      border-bottom: 1px solid $heavenlyGrey;
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .photo {
+      position: absolute;
+      width: 100%;
+      height: 75%;
+      background: {
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+    }
+
+    .expand {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 10px;
+    }
+
+    .left {
+      position: absolute;
+      left: 0;
+      margin: 10px;
+      z-index: 1;
+    }
+
+    .right {
+      position: absolute;
+      right: 0;
+      margin: 10px;
+      z-index: 1;
+    }
+
+    .mini {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 75px;
+    }
+
+    .olderPrice {
+      text-decoration: line-through $milk;
+      text-align: center;
+      font-size: 22px;
+      color: $milk;
+      margin-bottom: 0;
+    }
+
+    .price {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: $white;
+      background-color: $black;
+      margin-bottom: 0;
+    }
+
+    .buttons {
+      a {
+        margin-right: 10px;
+      }
+
+      padding: 12px 0;
+    }
+
+    .quantity {
+      p {
+        display: inline;
+        margin-right: 30px;
+      }
+
+      input {
+        padding: 5px 10px;
+        font-size: 13px;
+        line-height: 22px;
+        border: 1px solid $dark-grey;
+        width: 66px;
+        text-align: center;
+        margin-right: 10px;
+      }
+
+      a {
+        margin-right: 10px;
+      }
+    }
+
+    .review {
+      p {
+        display: inline;
+      }
+      p:first-of-type {
+        padding-right: 20px;
+      }
+    }
+
+    .social {
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}

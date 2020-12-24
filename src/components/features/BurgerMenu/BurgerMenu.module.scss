@@ -1,0 +1,93 @@
+@import "../../../styles/settings.scss";
+
+.navbar {
+  position: relative;
+  z-index: 9999;
+
+  .menuBars {
+    background: none;
+    margin-left: 20px;
+  }
+  
+  .navMenu.active {
+    display: none;
+  }
+
+  .navMenu {
+    background: $black;
+    width: 250px;
+    height: 100vh;
+    transition: $main-transition;
+    
+    .navMenuItems {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      .navToggle {
+        position: relative;
+        left: 80%;
+        width: 40px;
+        transition: $main-transition;
+        &:hover {
+          transform: translateY(-8%);
+          box-shadow: 0 0 10px red;
+          border-bottom: 1px solid red;
+          color: $white;
+        }
+      }
+      
+      .item {
+        margin: 0 0 0 10px;
+        padding: 10px;
+
+        span {
+          margin-left: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          transition: $main-transition;
+          border-radius: 50%;
+          padding: 10px 15px 10px 15px;
+        
+          &:hover {
+            transform: translateY(-8%);
+            box-shadow: 0 0 10px #17DAA3;
+            border-bottom: 3px solid #17DAA3;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hideBurger {
+  display: none;
+}
+
+.iconBurger {
+  font-size: 40px;
+  position: relative;
+  top: 30px;
+  transition: $main-transition;
+  &:hover {
+    transform: translateY(-8%);
+    box-shadow: 0 0 10px #17DAA3;
+    border-bottom: 1px solid #17DAA3;
+    color: $white;
+  }
+}
+
+.iconClose {
+  font-size: 40px;
+}
+
+.overlay {
+  position: absolute;
+  background-color: lightcoral;
+  min-width: 768px;
+  height: 11000px;
+  background-color: rgba(0, 0, 0, 0.4);
+}

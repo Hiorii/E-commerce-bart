@@ -1,0 +1,250 @@
+@import "../../../styles/settings";
+
+.root {
+  margin: 2rem 0;
+
+  .row {
+    justify-content: space-between;
+  }
+
+  .leftContainer {
+    padding: 0;
+    border: 1px solid #e1e1e1;
+    max-width: 420px;
+    min-width: 360px;
+    max-height: 453px;
+  }
+
+  .hotDealsContainer {
+    display: flex;
+    padding: .5rem;
+    background: $dark-grey;
+
+    h5 {
+      text-transform: capitalize;
+      color: $white;
+      margin: 0;
+    }
+    .dots {
+      max-width: 35%;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: $dark-grey;
+        @include flex(center, flex-end);
+        height: 100%;
+        li {
+          display: inline-block;
+          margin-left: 0.5rem;
+
+          a.hotDealTrue {
+            background-color: $primary;
+          }
+
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: $white;
+            font-size: 0;
+
+            &.active,
+            &:hover {
+              background-color: $primary;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .promoBoxContainer {
+    height: auto;
+    padding: 0;
+  }
+
+  .rightContainer {
+    position: relative;
+    padding: 0;
+    min-height: 450px;
+    max-width: 420px;
+    min-width: 360px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .rightContainerMain {
+      @include center();
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 50%;
+
+      .description {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        color: $main-white;
+        position: relative;
+
+        h2 {
+          margin: auto;
+          text-align: center;
+          width: 100%;
+          font-size: 3rem;
+          font-weight: 400;
+        }
+
+        span {
+          font-weight: bolder;
+        }
+
+        p {
+          text-align: center;
+          width: 100%;
+          font-size: 1.5rem;
+        }
+
+        .promoBtn {
+          background: $main-white;
+          padding: 1rem;
+          border-radius: 4px;
+          position: absolute;
+          top: 88%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          color: $dark-grey;
+          transition: $main-transition;
+
+          &:hover {
+            background: $primary;
+            text-decoration: none;
+            color: $invisibleGrey;
+          }
+        }
+      }
+    }
+
+    .navigation {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      height: 8%;
+      background: $dark-grey;
+      z-index: 99;
+
+      a {
+        color: $main-white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        transition: $main-transition;
+
+        &:hover {
+          text-decoration: none;
+          background: $primary;
+        }
+      }
+
+      .navigationLeft, .navigationRight {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+/*Fade effect LEFT container*/
+.fadeIn {
+  animation: fadeIn 2s;
+}
+
+.fadeOut {
+  animation: fadeOut 2s;
+}
+
+/*Fade effect RIGHT container*/
+
+.fadeInRight {
+  animation: fadeIn 1s;
+}
+
+.fadeOutRight {
+  animation: fadeOut 1s;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
+  .root .row {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .leftContainer {
+      min-width: 360px;
+      max-width: 420px;
+    }
+
+    .rightContainer {
+      min-width: 360px;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .root .row {
+    flex-direction: column;
+    align-items: center;
+
+    .leftContainer {
+      margin-bottom: 40px;
+    }
+
+    .rightContainer {
+      max-width: 420px;
+
+      .description {
+        height: 80%;
+
+        p {
+          font-size: 20px;
+        }
+
+        .promoBtn {
+          top: 73%;
+        }
+      }
+      .navigation {
+        bottom: 77px;
+      }
+    }
+  }
+}

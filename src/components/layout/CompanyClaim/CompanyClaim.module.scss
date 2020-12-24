@@ -1,0 +1,132 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $black;
+
+  :global(.container) > :global(.row) {
+    height: 145px;
+  }
+}
+
+.iconWrapper {
+  //flex-grow: 1;
+  //margin-left: 20%;
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+
+    .list {
+      list-style-type: none;
+      margin: 0;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      flex-wrap: nowrap;
+
+      li {
+        display: inline;
+        margin: 0 10px 0 10px;
+
+        &:hover .icon {
+          color: $primary;
+        }
+
+        &:hover a {
+          color: $primary;
+          transform: translateY(-8%);
+          box-shadow: 0 0 10px #17DAA3;
+        }
+
+        a {
+          display: flex;
+          flex-wrap: nowrap;
+          text-decoration: none;
+          color: $white;
+          padding: 5px;
+          border-radius: 50%;
+
+          .icon {
+            color: $white;
+            transition: color $transition;
+            transform: translateX(2.5px);
+          }
+          .iconUserConf {
+            color: $main-white;
+          }
+          .iconUserStar {
+            color: $primary;
+            margin-left: .5rem;
+          }
+        }
+      }
+
+      .topMenuText {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.compRow {
+  flex-wrap: nowrap !important;
+  position: relative;
+  height: 100px;
+  .logo {
+    left: 50%;
+  }
+}
+
+.burgerWrapper {
+  height: 100%;
+  position: absolute;
+  display: flex;
+
+  .burger {
+    height: 100%;
+  }
+}
+
+@media (min-width: 445px) and (max-width: 768px) {
+
+  li {
+    margin: 0 10px 0 10px;
+    a {
+      font-size: 20px;
+      .topMenuText {
+        font-size: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 445px) {
+
+  li {
+    margin: 0 10px 0 10px;
+    a {
+      font-size: 20px;
+      .topMenuText {
+        font-size: 0;
+      }
+    }
+  }
+  .compRow {
+    flex-wrap: wrap !important;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .logo {
+    width: 40px;
+  }
+}
+
+@media (min-width: 769px) {
+
+ .burgerWrapper {
+   display: none;
+ }
+}

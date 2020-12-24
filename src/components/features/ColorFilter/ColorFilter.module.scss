@@ -1,0 +1,52 @@
+@import "../../../styles/settings.scss";
+
+
+.filterWrapper {
+    width: 100%;
+    a {
+        margin: 0;
+        padding-top: 2px;
+        margin-left: 10px;
+    }
+    .colorWrapper {
+        display: flex;
+        &:hover {
+            display: flex;
+            margin-left: 30px;
+            color: $orange;
+        }
+    }
+}
+
+span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    margin: 8px 8px;
+    border-radius: 2px;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.green {
+    background-color: green;
+}

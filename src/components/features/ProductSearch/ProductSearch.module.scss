@@ -1,0 +1,134 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  border: 1px solid $heavenlyGrey;
+  display: inline-flex;
+  height: 45px;
+  color: $invisibleGrey;
+  width: 70%;
+
+  .category {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    .icon:first-child {
+      color: $primary;
+    }
+  }
+  .category:hover {
+    .dropdownContent {
+      display: block;
+    }
+    .dropdownContainer {
+      font-weight: bolder;
+    }
+  }
+
+  .searchField {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+
+    input {
+      border: 0;
+      padding-left: 10px;
+      font-size: 14px;
+      outline: none;
+      width: 90%;
+
+      &::placeholder {
+        color: $invisibleGrey;
+      }
+    }
+
+    .searchButton {
+      margin: 0 10px 0 10px;
+    }
+
+    .autoContainer {
+      position: absolute;
+      border-style: solid;
+      background-color: $main-white;
+      top: 32px;
+      width: 100.7%;
+      max-height: 30rem;
+      height: auto;
+      overflow: scroll;
+      overflow-x: hidden;
+      z-index: 99;
+      transform: translateX(-1.5px);
+
+      .option {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 5px;
+
+        &:hover {
+          .link {
+            color: $primary;
+            transform: translateY(-8%);
+            box-shadow: 0 0 10px #17DAA3;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .option,
+      .link {
+        font-size: $font-size;
+        color: $black;
+        text-decoration: none;
+        cursor: pointer;
+        padding: .5rem;
+      }
+    }
+  }
+}
+
+button:focus {
+ outline: none;
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+  .root {
+    width: 80%;
+
+    .category {
+      width: 100%;
+
+      .searchField {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 951px) {
+  .root {
+    width: 60%
+  }
+}
+
+.test {
+  .link{
+    color: $primary !important;
+    transform: translateY(-8%);
+    box-shadow: 0 0 10px #17DAA3;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 500px) {
+
+  .root .autoContainer .option .link {
+    font-size: 12px;
+  }
+}

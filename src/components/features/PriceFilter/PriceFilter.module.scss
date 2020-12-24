@@ -1,0 +1,28 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .header {
+    border-bottom: 2px solid gray;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+  form {
+    margin: 1rem 0;
+    @include flex(center, center);
+    flex-wrap: wrap;
+    input {
+      width: 12rem;
+      height: 3rem;
+      border-radius: 40px;
+      text-align: center;
+      &:focus {
+        outline: none;
+      }
+    }
+    div {
+      width: 100%;
+      margin: .5rem 0;
+      text-align: center;
+    }
+  }
+}

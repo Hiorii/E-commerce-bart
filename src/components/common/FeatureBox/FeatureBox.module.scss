@@ -1,0 +1,85 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+   &:hover .iconWrapper::before {
+        border: 1px solid $primary;
+    }
+
+  .iconWrapper {
+    height: 60px;
+    transform: translateY(-50%);
+    color: $invisibleGrey;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+
+    .icon {
+      position: relative;
+      z-index: 9;
+    }
+
+    &::before {
+      content: "";
+      border: 1px solid $lightGrey;
+      @include center();
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      background-color: $white;
+      z-index: -1;
+    }
+
+    &::after {
+      @extend %hover-effect;
+      content: "";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      @include center();
+      border: 1px solid $lightGrey;
+    }
+  }
+
+  .content {
+    @extend %hover-effect;
+    text-transform: uppercase;
+    color: rgb(42, 42, 42);
+    letter-spacing: 1px;
+    font-weight: 300;
+    width: 100%;
+    padding-top: 60px;
+
+    h5 {
+      font-weight: 600;
+      margin: 0;
+    }
+
+    p {
+    }
+  }
+
+  &.active:hover {
+    .iconWrapper {
+      color: #ffffff;
+
+      &::after {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
+}
+

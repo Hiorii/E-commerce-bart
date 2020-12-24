@@ -1,0 +1,78 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 15px;
+  max-width: 350px;
+
+  .header {
+    border-bottom: 2px solid $heavenlyGrey;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+
+  .list{
+    padding: 0;
+    list-style-type: none;
+    div {
+      width: 100%;
+    }
+    div:hover {
+      background: $primary;
+    }
+    input[type="checkbox"]:before {
+      position: relative;
+      display: block;
+      top: -5px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid $heavenlyGrey;
+      content: "";
+      background: $main-white;
+    }
+    input[type="checkbox"]:after {
+      position: relative;
+      display: block;
+      left: 2px;
+      top: -27px;
+      width: 20px;
+      height: 20px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #B3B3B3 #dcddde #dcddde #B3B3B3;
+      content: "";
+      background-image: linear-gradient(135deg, #B1B6BE 0%, #FFF 100%);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    input[type="checkbox"]:checked:after {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAQAAABuW59YAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAB2SURBVHjaAGkAlv8A3QDyAP0A/QD+Dam3W+kCAAD8APYAAgTVZaZCGwwA5wr0AvcA+Dh+7UX/x24AqK3Wg/8nt6w4/5q71wAAVP9g/7rTXf9n/+9N+AAAtpJa/zf/S//DhP8H/wAA4gzWj2P4lsf0JP0A/wADAHB0Ngka6UmKAAAAAElFTkSuQmCC'), linear-gradient(135deg, #B1B6BE 0%, #FFF 100%);
+      background-size: contain;
+    }
+    input[type="checkbox"]:disabled:after {
+      -webkit-filter: opacity(0.4);
+    }
+    input[type="checkbox"]:not(:disabled):checked:hover:after {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAQAAABuW59YAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAB2SURBVHjaAGkAlv8A3QDyAP0A/QD+Dam3W+kCAAD8APYAAgTVZaZCGwwA5wr0AvcA+Dh+7UX/x24AqK3Wg/8nt6w4/5q71wAAVP9g/7rTXf9n/+9N+AAAtpJa/zf/S//DhP8H/wAA4gzWj2P4lsf0JP0A/wADAHB0Ngka6UmKAAAAAElFTkSuQmCC'), linear-gradient(135deg, #8BB0C2 0%, #FFF 100%);
+      background-size: cover;
+    }
+    input[type="checkbox"]:not(:disabled):hover:after {
+      background-image: linear-gradient(135deg, #8BB0C2 0%, #FFF 100%);
+      border-color: #85A9BB #92C2DA #92C2DA #85A9BB;
+    }
+    input[type="checkbox"]:not(:disabled):hover:before {
+      border-color: #3D7591;
+    }
+    label {
+      font-size: 1.4rem;
+      margin-left: 1.4rem;
+      span {
+        margin-right: .2rem;
+        color: $heavenlyGrey;
+      }
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

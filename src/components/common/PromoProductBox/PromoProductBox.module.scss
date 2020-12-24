@@ -1,0 +1,147 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+
+  .btnAddToCart {
+    display: none;
+    @include center();
+    text-align: center;
+    top: 113%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    .btnAddToCart {
+      display: block;
+    }
+  }
+
+  .happyHour {
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    font-size: 14px;
+  }
+
+  .photo {
+    position: relative;
+    align-items: flex-end;
+    width: 100%;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .sale {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $almostBlack;
+      border-radius: 50%;
+      color: $white;
+      padding: 30px 15px 5px 15px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+    @include flex(center, center);
+    flex-wrap: wrap;
+    margin: 2rem 0;
+
+    h5 {
+      color: $primary;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      width: 100%;
+      a {
+        text-decoration: none;
+        color: rgb(42, 42, 42);
+      }
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid #2a2a2a;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    .price > .small {
+      padding: 0;
+    }
+    .price h5 {
+      padding-bottom: 0;
+    }
+    .price > h5 {
+      margin-bottom: 0;
+    }
+
+    .olderPrice {
+      text-decoration: line-through double $main-dark;
+      font-size: 22px;
+      color: $lightGrey;
+      text-align: right;
+    }
+    .price h5 {
+      margin-bottom: 0;
+    }
+    .outline {
+      background-color: $white;
+      color: $main-dark;
+      :hover {
+        color: white;
+        background-color: black;
+      }
+      icon {
+        font-size: 30px;
+        margin-left: auto;
+      }
+    }
+  }
+  &:hover {
+    .price div {
+      background-color: $primary;
+      color: $white;
+      font-weight: bold;
+      line-height: 1;
+    }
+    .price > .small {
+      padding-bottom: 0;
+    }
+    .price h5 {
+      margin-bottom: 0;
+    }
+  }
+}

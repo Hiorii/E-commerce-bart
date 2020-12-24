@@ -1,0 +1,65 @@
+@import "../../../styles/settings.scss";
+
+.root {
+    margin: 30px 0;
+    .wrapper {
+        width: 100%;
+        min-height: 50vh;
+        border:  1px solid $heavenlyGrey;
+
+        .list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: block;
+
+            .item {
+                display: inline-block;
+                border-bottom: 1px solid $heavenlyGrey;
+                border-right: 1px solid $heavenlyGrey;
+                padding: 10px;
+                text-transform: uppercase;
+                transition: $main-transition;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            li.active {
+                display: inline-block;
+                color: $primary;
+                padding: 10px;
+                border-right:  1px solid $heavenlyGrey;
+                text-transform: uppercase;
+                transition: $main-transition;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+    .root .wrapper .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li.active {
+            flex-basis: 200px;
+            border-right: none;
+            margin: 20px 20px 0 20px;
+            text-align: center;
+        }
+    }
+
+    .item {
+        flex-basis: 200px;
+        margin: 20px 20px 0 20px;
+        border:  1px solid $heavenlyGrey;
+        text-align: center;
+    }
+}
+
+
+

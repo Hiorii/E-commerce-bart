@@ -1,0 +1,30 @@
+@import "../../../styles/settings.scss";
+
+.filters {
+  width: 100%;
+  height: auto;
+
+  .filtersContainer {
+    display: flex;
+    height: 50px;
+    align-items: center;
+
+
+    .selectFilter {
+      margin-right: 3%;
+
+      select {
+        height: 40px;
+      }
+    }
+
+    .textFilter input {
+      height: 40px;
+    }
+  }
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .filters {
+    display: none;
+  }
+}

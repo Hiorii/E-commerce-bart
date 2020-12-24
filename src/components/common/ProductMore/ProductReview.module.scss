@@ -1,0 +1,86 @@
+@import "../../../styles/settings.scss";
+
+.root {
+    margin: 20px 20px 0 20px;
+    color: rgba(0, 0, 0, 0.7);
+
+    .buttonAdd {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 10px 0;
+        transition: all 0.5s;
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    .stars {
+        display: inline;
+        margin: 0 10px 0 10px;
+    }
+    
+    .ratingText {
+        margin-top: 16px;
+    }
+
+    .rating {
+        margin: 0 0 20px 0;
+    }
+
+    .textarea {
+        width: 100%;
+        resize: none;
+    }  
+
+    .inputs {
+        margin: 20px 0 50px 0;
+        display: flex;
+        justify-content: space-between;
+  
+        input {
+            min-height: 50px;
+            min-width: 40%;
+        }       
+    }
+    
+    .continue {
+        color: $white;
+        background-color: black;
+        padding: 0 5px;
+        line-height: 50px;
+        align-content: center;
+        text-decoration: none;
+        transition: all 0.5s;
+        cursor: pointer;
+        &:hover {
+            color: $primary;
+            background-color: $white;
+        }
+    }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+    
+    .root .inputs {
+        flex-direction: column;
+        align-items: center;
+
+        .continue {
+           width: 50%;
+           text-align: center;
+
+           &:hover {
+           font-weight: bolder;
+           }
+        }
+    }
+
+     input {
+        width: 100%;
+        margin: 20px 0;
+     }
+
+}
+
